@@ -1,0 +1,41 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+      <a href="/add-product/">Create New Product</a>
+      <span style="float:right;"><a href="/logout/">logout</a></span>
+      {% if self.product_li %}
+      <div class="col-sm-10 col-sm-offset-1">
+      <table class="table table-bordered " style="border-radius:0px;box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);">
+        <thead>
+          <th>No</th>
+          <th>Products</th>
+        </thead>
+        <tbody>
+          {% for product in self.product_li %}
+          <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{product.product_name}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      </div>
+      <div class="col-sm-2">
+      </div>
+      {% else %}
+        <div class ="col-sm-12" style="margin-top: 30px;">
+          <div align="center" style="width: 35%;margin: 40px auto;padding: 35px;border: 1px solid #B0C4DE;background: white;border-radius: 10px 10px 10px 10px;box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.15);"> 
+            <h3> No Products</h3>       
+          </div>
+        </div>      
+      {% endif %}
+		</div>
+	</div>
+</div>
+</body>
+</html>

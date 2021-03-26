@@ -1,0 +1,29 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="col-sm-12 col-md-offset-3 col-md-4" style="margin-top:30px">
+            <div class="thumbnail info-thumbnail background-lead color-text">
+              <div class="special background-lead color-white"><h3>Sign Up </h3></div>
+              <div class="caption bordered background-white">
+                <form role="form"  method="post">
+                {% csrf_token %}
+                  {{ form.as_p }}
+                  <br>
+                  <div style="text-align:center;margin-top: 0px;" >  
+                  
+                  <button type="submit" class="btn btn-primary">Sign up</button>
+                </div>
+                  
+                </form>
+              </div>
+            </div>
+            
+          </div>
+		</div>
+	</div>
+</body>
+</html>
